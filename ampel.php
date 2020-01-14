@@ -31,7 +31,7 @@ if (isset($_POST["act"])) {
        } 
     } 
     else if ($_POST["act"] == "get") {
-        $querys = json_decode($_POST["q"]);
+        $querys = json_decode($_POST["q"],true);
         foreach ($querys["q"] as $query) {
             try
             {
