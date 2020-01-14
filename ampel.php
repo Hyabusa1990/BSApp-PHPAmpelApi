@@ -31,8 +31,8 @@ if (isset($_POST["act"])) {
        } 
     } 
     else if ($_POST["act"] == "get") {
-        $querys = str_split($_POST["q"], 2);
-        foreach ($querys as $query) {
+        $querys = json_decode($_POST["q"]);
+        foreach ($querys["q"] as $query) {
             try
             {
                 $buffer = $buffer + array($query => $pdo->getValuefromKey($query));
