@@ -4,12 +4,6 @@ header('Content-Type: application/json');
 $msg = "";
 $status = "OK";
 
-$pdo = new SQLiteConnection();
-if ($pdo == null)
-{
-    $msg = 'Whoops, could not connect to the SQLite database!';
-}
-
 
 if (isset($_POST["act"])) {
     $buffer = [];
